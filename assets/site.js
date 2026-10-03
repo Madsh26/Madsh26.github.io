@@ -1,5 +1,38 @@
 (() => {
   'use strict';
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const revealTargets = document.querySelectorAll('.project-row, .approach-grid article, .certificate-card, .trajectory-preview, .research-grid article, .metrics, .sport-figure');
+  if ('IntersectionObserver' in window && !reducedMotion.matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {entry.target.classList.add('is-visible'); observer.unobserve(entry.target);}
+      });
+    }, {threshold: 0.08});
+    revealTargets.forEach((target, i) => {target.classList.add('reveal'); target.style.setProperty('--reveal-delay', `${i % 3 * 65}ms`); observer.observe(target);});
+    reducedMotion.addEventListener('change', e => {if(e.matches) {revealTargets.forEach(t => t.classList.add('is-visible')); observer.disconnect();}});
+  }
+  const progress = document.createElement('div');
+  progress.className = 'reading-progress'; progress.setAttribute('aria-hidden', 'true'); document.body.append(progress);
+  let scheduled = false;
+  const updateProgress = () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = `scaleX(${total > 0 ? Math.min(1, window.scrollY / total) : 0})`;
+    scheduled = false;
+  };
+  window.addEventListener('scroll', () => {if(!scheduled) {scheduled=true; window.requestAnimationFrame(updateProgress);}}, {passive:true});
+  window.addEventListener('resize', updateProgress); updateProgress();
+  const certificateSearch = document.querySelector('#certificate-search');
+  if (certificateSearch) {
+    const normalize = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    certificateSearch.addEventListener('input', () => {
+      const query = normalize(certificateSearch.value.trim()); let count = 0;
+      document.querySelectorAll('.certificate-card').forEach(card => {
+        card.hidden = !normalize(card.textContent).includes(query);
+        if(!card.hidden) {count++; card.classList.add('is-visible');}
+      });
+      document.querySelector('#certificate-status').textContent = `${count} certificados encontrados`;
+    });
+  }
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#site-nav');
   if (menu && nav) {
@@ -11,7 +44,7 @@
   document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
     document.querySelectorAll('.filter').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
     let count = 0;
-    document.querySelectorAll('.project-row').forEach(row => {row.hidden = button.dataset.filter !== 'all' && !row.dataset.category.split(' ').includes(button.dataset.filter); if (!row.hidden) count++;});
+    document.querySelectorAll('.project-row').forEach(row => {row.hidden = button.dataset.filter !== 'all' && !row.dataset.category.split(' ').includes(button.dataset.filter); if (!row.hidden) {count++; row.classList.add('is-visible');}});
     document.querySelector('#filter-status').textContent = `${count} proyectos visibles`;
   }));
   // P(X <= c) for X ~ Binomial(n,p), calculated directly by recurrence.

@@ -1,11 +1,11 @@
 ---
-title: "StatControl Pro | Mauricio Serrano"
+title: "StatControl Pro"
 description: "Control estadístico de procesos, gráficos Shewhart y análisis de capacidad en Python."
 ---
 
 ```{=html}
 <div class="container"><header class="page-hero"><p class="breadcrumbs"><a href="/index.html#proyectos">Proyectos</a> / StatControl Pro</p><span class="eyebrow">Calidad / control de procesos</span><h1>StatControl Pro</h1><p class="lead">Convertir mediciones en evidencia sobre la estabilidad y la capacidad de un proceso.</p><div class="case-meta"><div><span>Herramientas</span>Python · Dash · Plotly · SciPy</div><div><span>Contexto</span>Proyecto académico</div><div><span>Evidencia</span>Código y documentación públicos</div></div><div class="actions"><a class="button" href="https://github.com/Madsh26/statcontrol-pro">Ver repositorio</a></div></header><article class="case-body">
-<h2>La pregunta</h2><p>¿El proceso se mantiene estable? ¿Qué indican sus mediciones frente a las especificaciones? Antes de calcular un índice, es necesario validar la entrada, respetar el orden de observación y revisar el modelo estadístico.</p>
+<div class="metrics"><div class="metric"><strong>3</strong><span>Familias: X̄–R, X̄–S e I–MR</span></div><div class="metric"><strong>4</strong><span>Índices: Cp, Cpk, Pp y Ppk</span></div><div class="metric"><strong>4</strong><span>Formatos de entrada: CSV, XLSX, TSV y TXT</span></div></div><h2>La pregunta</h2><p>¿El proceso se mantiene estable? ¿Qué indican sus mediciones frente a las especificaciones? Antes de calcular un índice, es necesario validar la entrada, respetar el orden de observación y revisar el modelo estadístico.</p>
 <h2>La solución</h2><p>Una aplicación web en español que acompaña la importación, la configuración y la interpretación. Admite archivos CSV, XLSX, TSV y TXT, además de tablas pegadas desde Excel.</p><ul><li>Gráficos X̄–R, X̄–S, I–MR y Pareto interactivos.</li><li>Referencia fija para evaluar mediciones posteriores sin recalcular límites.</li><li>Índices Cp, Cpk, Pp y Ppk, histograma, gráfico Q–Q y revisión de normalidad.</li><li>Exportaciones CSV, Excel, PDF y proyectos JSON que se recalculan al abrirlos.</li></ul>
 <figure class="case-figure"><svg viewBox="0 0 440 235" role="img" aria-label="Ilustración de un gráfico de control con datos sintéticos: la observación 19 supera el límite superior de 65">
       <rect x="35" y="69.44444444444444" width="370" height="103.33333333333333" fill="#244be4" opacity=".04"/>

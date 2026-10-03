@@ -6,10 +6,11 @@ Sitio en Quarto con diseño propio, publicado en GitHub Pages.
 
 - `index.qmd`: presentación, proyectos y contacto.
 - `proyectos/*.qmd`: casos de estudio.
-- `trayectoria.qmd` y `cv.qmd`: perfil y formación.
+- `trayectoria.qmd` y `formacion.qmd`: perfil, formación y certificados.
 - `assets/styles.css`: identidad visual y adaptación móvil.
-- `assets/site.js`: navegación, filtros y ejemplo binomial.
-- `assets/CV-Mauricio-Serrano.pdf`: versión pública del CV.
+- `assets/site.js`: navegación, filtros, búsqueda de certificados, ejemplo binomial y animaciones con movimiento reducido.
+- `assets/certificados/`: documentos originales y vistas previas.
+- `assets/social-card.jpg`: imagen social de 1200 × 630.
 - `reportes/football/`: copia atribuida del reporte público y sus recursos.
 
 Con Quarto 1.10.18:
@@ -33,3 +34,5 @@ La trayectoria se basa en el CV facilitado por Mauricio Serrano. Los casos se ba
 La curva CO es una demostración educativa del modelo binomial; no es la aplicación Shiny completa. El gráfico de control utiliza datos sintéticos y límites ilustrativos. Las demos completas de Shiny y Dash se añadirán cuando estén desplegadas y verificadas.
 
 No publicar microdatos ICFES, archivos privados, credenciales ni datos personales de referencias del CV.
+
+El sitio no ofrece un CV descargable. Las contribuciones de Football fueron confirmadas por Mauricio. El caso Power BI se documentó revisando el informe original del bootcamp.

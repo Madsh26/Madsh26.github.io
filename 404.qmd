@@ -1,5 +1,5 @@
 ---
-title: "Página no encontrada | Mauricio Serrano"
+title: "Página no encontrada"
 description: "Volver al portafolio de Mauricio Serrano."
 ---
 

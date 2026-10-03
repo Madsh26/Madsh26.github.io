@@ -1,11 +1,11 @@
 ---
-title: "MuestreoLab | Mauricio Serrano"
+title: "MuestreoLab"
 description: "Diseño y evaluación de planes de muestreo de aceptación por atributos."
 ---
 
 ```{=html}
 <div class="container"><header class="page-hero"><p class="breadcrumbs"><a href="/index.html#proyectos">Proyectos</a> / MuestreoLab</p><span class="eyebrow">Calidad / inspección de lotes</span><h1>MuestreoLab</h1><p class="lead">Diseñar una inspección significa decidir cuánto observar y qué riesgo aceptar.</p><div class="case-meta"><div><span>Herramientas</span>R · Shiny · renv</div><div><span>Contexto</span>Proyecto académico</div><div><span>Evidencia</span>Código y documentación públicos</div></div><div class="actions"><a class="button" href="https://github.com/Madsh26/Muestreo-Lab">Ver repositorio</a></div></header><article class="case-body">
-<h2>La pregunta</h2><p>¿Cuántas unidades conviene inspeccionar y cuántas unidades no conformes se pueden aceptar? Un tamaño de muestra aislado no responde la pregunta: hace falta conocer la protección que ofrece frente a distintos niveles de calidad.</p>
+<div class="metrics"><div class="metric"><strong>3</strong><span>Modelos: binomial, Poisson e hipergeométrico</span></div><div class="metric"><strong>7</strong><span>Bloques de pruebas documentados en run_tests.R</span></div><div class="metric"><strong>1</strong><span>Reporte PDF verificable en las pruebas</span></div></div><h2>La pregunta</h2><p>¿Cuántas unidades conviene inspeccionar y cuántas unidades no conformes se pueden aceptar? Un tamaño de muestra aislado no responde la pregunta: hace falta conocer la protección que ofrece frente a distintos niveles de calidad.</p>
 <h2>La solución</h2><p>MuestreoLab diseña planes a partir de dos puntos de protección: calidad buena y calidad límite. Busca el menor tamaño de muestra factible dentro del límite configurado y muestra los riesgos realmente alcanzados.</p>
 <ul><li>Modelos hipergeométrico exacto, binomial y Poisson.</li><li>Curvas CO, AOQ y ATI, comparación de hasta ocho planes y registro de decisiones por lote.</li><li>Informes PDF y exportaciones CSV y JSON para documentar el análisis.</li></ul>
 <h2>Explora la lógica de un plan</h2><p>Modifica la muestra y el número de aceptación. La curva muestra cómo cambia la probabilidad de aceptar un lote a medida que aumenta su proporción de unidades no conformes.</p><div class="lab-card" data-sampling-lab>

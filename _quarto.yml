@@ -14,7 +14,16 @@ website:
   description: Ingeniería industrial, analítica de datos y estadística aplicada. Proyectos de Mauricio Serrano.
   favicon: assets/favicon.svg
   search: false
-  open-graph: true
+  image: /assets/social-card.jpg
+  open-graph:
+    image: /assets/social-card.jpg
+    image-width: 1200
+    image-height: 630
+    image-alt: Mauricio Serrano — Análisis de datos y estadística aplicada
+    locale: es_CO
+  twitter-card:
+    card-style: summary_large_image
+    image: /assets/social-card.jpg
 format:
   html:
     lang: es
@@ -23,6 +32,8 @@ format:
     toc: false
     anchor-sections: false
     title-block-style: none
+    # La marca se añade una sola vez; las páginas usan títulos sin el nombre.
+    title-prefix: ""
     page-layout: full
     include-before-body: includes/header.html
     include-after-body: includes/footer.html
