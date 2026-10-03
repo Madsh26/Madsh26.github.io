@@ -1,0 +1,8 @@
+---
+title: "Página no encontrada | Mauricio Serrano"
+description: "Volver al portafolio de Mauricio Serrano."
+---
+
+```{=html}
+<div class="container not-found"><span class="eyebrow">Página no encontrada</span><h1>Volvamos<br>al inicio.</h1><p>Este enlace no corresponde a una página del portafolio.</p><a class="button" href="/index.html">Ir al portafolio</a></div>
+```

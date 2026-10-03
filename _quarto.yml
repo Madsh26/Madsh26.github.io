@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - '*.qmd'
+    - 'proyectos/*.qmd'
+  resources:
+    - assets/
+    - reportes/
+    - .nojekyll
+website:
+  title: Mauricio Serrano
+  site-url: https://madsh26.github.io
+  description: Ingeniería industrial, analítica de datos y estadística aplicada. Proyectos de Mauricio Serrano.
+  favicon: assets/favicon.svg
+  search: false
+  open-graph: true
+format:
+  html:
+    lang: es
+    theme: none
+    css: assets/styles.css
+    toc: false
+    anchor-sections: false
+    title-block-style: none
+    page-layout: full
+    include-before-body: includes/header.html
+    include-after-body: includes/footer.html
+    include-in-header:
+      text: |
+        <meta name="theme-color" content="#12233f">
+        <script src="/assets/site.js" defer></script>
+execute:
+  enabled: false
