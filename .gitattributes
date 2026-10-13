@@ -1,0 +1,3 @@
+
+# Whitespace in Matplotlib SVG path attributes is valid.
+*.svg -whitespace
